@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Score</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Resume Score: {{ score }}%</h1>
+        {% if missing %}
+            <h3>Consider adding these keywords:</h3>
+            <ul>
+                {% for word in missing %}
+                    <li>{{ word }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Your resume is very well optimized!</p>
+        {% endif %}
+        <a href="/">Check another resume</a>
+    </div>
+</body>
+</html>
